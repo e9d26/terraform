@@ -1,0 +1,47 @@
+[
+    {
+      "name": "kong",
+      "image": "library/kong",
+      "cpu": 10,
+      "memoryReservation": 600,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+       {
+         "name": "KONG_DATABASE",
+         "value": "postgres"
+       },
+       {
+         "name": "KONG_LOG_LEVEL",
+         "value": "info"
+       },
+       {
+         "name": "KONG_PG_DATABASE",
+         "value": "kong"
+       },
+       {
+         "name": "KONG_PG_HOST",
+         "value": "XXX.YYY.ap-northeast-1.rds.amazonaws.com"
+       },
+       {
+         "name": "KONG_PG_PASSWORD",
+         "value": "kongkong"
+       },
+       {
+         "name": "KONG_PG_PORT",
+         "value": "5432"
+       },
+       {
+         "name": "KONG_PG_USER",
+         "value": "kong"
+       }
+     ],
+     "family": "kong-api"
+  }
+]

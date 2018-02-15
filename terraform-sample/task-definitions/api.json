@@ -1,0 +1,15 @@
+[
+  {
+    "name": "custom-nginx-php-fpm",
+    "image": "harashun/custom-nginx-php-fpm",
+    "cpu": 10,
+    "memory": 200,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80,
+        "hostPort": 0
+      }
+    ]
+  }
+]
